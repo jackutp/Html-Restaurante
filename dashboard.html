@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifu | Dashboard Ejecutivo Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Sidebar Fijo -->
+        <aside class="sidebar">
+            <div class="logo">SHIFU</div>
+            <nav>
+                <a href="#marketing" class="nav-item active"><span class="nav-icon">◈</span> Marketing & Ventas</a>
+                <a href="#logistics" class="nav-item"><span class="nav-icon">◈</span> Logística & Almacén</a>
+                <a href="#production" class="nav-item"><span class="nav-icon">◈</span> Producción & Operaciones</a>
+                <a href="#management" class="nav-item"><span class="nav-icon">◈</span> Gerencia General</a>
+                <a href="#wine-cellar" class="nav-item"><span class="nav-icon">◈</span> Gestión de Bodega</a>
+                <a href="#vip-concierge" class="nav-item"><span class="nav-icon">◈</span> Conserjería VIP</a>
+            </nav>
+            <div class="sidebar-footer">
+                <span>© 2026 Shifu Group</span>
+            </div>
+        </aside>
+
+        <!-- Área de Contenido Dinámica -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1>Panel de Control Ejecutivo</h1>
+                <div class="user-profile">
+                    <span>Director de Operaciones</span>
+                    <div class="avatar">DO</div>
+                </div>
+            </header>
+
+            <!-- a. Marketing y Ventas -->
+            <section id="marketing" class="panel">
+                <h2>Marketing & Ventas</h2>
+                <div class="panel-grid">
+                    <div class="card">
+                        <h3>Mapa de Calor: Rentabilidad por Mesa</h3>
+                        <div class="heatmap">
+                            <div class="table hot">1</div><div class="table warm">2</div><div class="table cold">3</div>
+                            <div class="table hot">4</div><div class="table warm">5</div><div class="table cold">6</div>
+                            <div class="table hot">7</div><div class="table warm">8</div><div class="table cold">9</div>
+                            <div class="table hot">10</div><div class="table warm">11</div><div class="table cold">12</div>
+                        </div>
+                        <p class="legend"><span class="dot hot"></span> Alta Rentabilidad <span class="dot warm"></span> Media <span class="dot cold"></span> Baja</p>
+                    </div>
+                    <div class="card">
+                        <h3>Campañas VIP Activas</h3>
+                        <select class="gold-select">
+                            <option>🌙 Noche de Sabores Asiáticos</option>
+                            <option>🥂 Exclusiva Cata de Cavas</option>
+                            <option>🎋 Menú Degustación Otoño</option>
+                        </select>
+                        <div class="campaign-metrics">
+                            <div class="metric"><span>Conversión</span><strong>24.5%</strong></div>
+                            <div class="metric"><span>Ticket Promedio</span><strong>$320</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- b. Logística y Almacén -->
+            <section id="logistics" class="panel">
+                <h2>Logística & Almacén</h2>
+                <div class="panel-grid">
+                    <div class="card full-width">
+                        <h3>Stock Crítico: Insumos de Lujo</h3>
+                        <div class="stock-list">
+                            <div class="stock-item">
+                                <div class="stock-label"><span>🍄 Trufa Negra Melanosporum</span> <span class="stock-pct">12%</span></div>
+                                <div class="progress-track"><div class="progress-fill critical" style="width: 12%"></div></div>
+                            </div>
+                            <div class="stock-item">
+                                <div class="stock-label"><span>🍾 Cava Krug 2004</span> <span class="stock-pct">35%</span></div>
+                                <div class="progress-track"><div class="progress-fill warning" style="width: 35%"></div></div>
+                            </div>
+                            <div class="stock-item">
+                                <div class="stock-label"><span>🐟 Caviar Beluga Imperial</span> <span class="stock-pct">8%</span></div>
+                                <div class="progress-track"><div class="progress-fill critical" style="width: 8%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- c. Producción y Operaciones -->
+            <section id="production" class="panel">
+                <h2>Producción & Operaciones</h2>
+                <div class="panel-grid">
+                    <div class="card">
+                        <h3>Ritmo de Cocina</h3>
+                        <div class="kitchen-monitor">
+                            <div class="monitor-state optimal">
+                                <div class="pulse"></div>
+                                <div class="state-label">Óptimo</div>
+                                <div class="state-time">≤ 15 min</div>
+                            </div>
+                            <div class="monitor-state warning">
+                                <div class="pulse"></div>
+                                <div class="state-label">Alerta</div>
+                                <div class="state-time">16-25 min</div>
+                            </div>
+                            <div class="monitor-state critical">
+                                <div class="pulse"></div>
+                                <div class="state-label">Crítico</div>
+                                <div class="state-time">≥ 26 min</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Comandas en Preparación</h3>
+                        <ul class="orders-queue">
+                            <li class="order-item">🔥 #1042 · Wagyu A5 <span>08:12</span></li>
+                            <li class="order-item">🍣 #1043 · Omakase Set <span>12:45</span></li>
+                            <li class="order-item">🍲 #1044 · Consomé Premium <span>18:02</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- d. Dirección o Gerencia General -->
+            <section id="management" class="panel">
+                <h2>Gerencia General</h2>
+                <div class="panel-grid">
+                    <div class="card">
+                        <h3>Ventas Proyectadas vs Reales (Último Semestre)</h3>
+                        <div class="chart-wrapper">
+                            <div class="chart-group">
+                                <div class="bar projected" style="height: 65%"></div>
+                                <div class="bar actual" style="height: 78%"></div>
+                            </div>
+                            <div class="chart-group">
+                                <div class="bar projected" style="height: 80%"></div>
+                                <div class="bar actual" style="height: 92%"></div>
+                            </div>
+                            <div class="chart-group">
+                                <div class="bar projected" style="height: 70%"></div>
+                                <div class="bar actual" style="height: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="chart-legend">
+                            <span class="dot projected"></span> Proyectado
+                            <span class="dot actual"></span> Real
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>KPI Satisfacción del Cliente</h3>
+                        <div class="kpi-container">
+                            <svg class="kpi-ring" viewBox="0 0 36 36">
+                                <circle class="bg" cx="18" cy="18" r="15.9155" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+                                <circle class="progress" cx="18" cy="18" r="15.9155" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="94, 100" stroke-linecap="round"/>
+                            </svg>
+                            <div class="kpi-value">4.9</div>
+                        </div>
+                        <p class="kpi-subtitle">Excelencia Certificada</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- e. Gestión de Bodega (Nueva) -->
+            <section id="wine-cellar" class="panel">
+                <h2>Gestión de Bodega</h2>
+                <div class="panel-grid">
+                    <div class="card">
+                        <h3>Control de Cavas Exclusivas</h3>
+                        <div class="cellar-grid">
+                            <div class="vault">
+                                <h4>Zona A · Tintos de Guarda</h4>
+                                <div class="control-row">
+                                    <label>Temperatura</label>
+                                    <input type="range" min="12" max="18" value="14" class="gold-range">
+                                    <span class="range-val">14°C</span>
+                                </div>
+                                <div class="control-row">
+                                    <label>Humedad</label>
+                                    <input type="range" min="60" max="80" value="72" class="gold-range">
+                                    <span class="range-val">72%</span>
+                                </div>
+                            </div>
+                            <div class="vault">
+                                <h4>Zona B · Blancos & Cavas</h4>
+                                <div class="control-row">
+                                    <label>Temperatura</label>
+                                    <input type="range" min="6" max="12" value="9" class="gold-range">
+                                    <span class="range-val">9°C</span>
+                                </div>
+                                <div class="control-row">
+                                    <label>Humedad</label>
+                                    <input type="range" min="65" max="85" value="68" class="gold-range">
+                                    <span class="range-val">68%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- f. Conserjería VIP (Nueva) -->
+            <section id="vip-concierge" class="panel">
+                <h2>Conserjería VIP</h2>
+                <div class="panel-grid">
+                    <div class="card full-width">
+                        <h3>Perfiles de Comensales</h3>
+                        <div class="vip-list">
+                            <div class="vip-card" onclick="document.getElementById('modal-vip').showModal()">
+                                <div class="vip-avatar">MR</div>
+                                <div class="vip-details">
+                                    <h4>Miguel R. <span class="badge platinum">Platinum</span></h4>
+                                    <p class="pref">Prefiere: Sake Junmai Daiginjo, Mesa ventana</p>
+                                    <p class="allergy">⚠️ Alergias: Marisco, Gluten</p>
+                                </div>
+                            </div>
+                            <div class="vip-card">
+                                <div class="vip-avatar">EL</div>
+                                <div class="vip-details">
+                                    <h4>Elena L. <span class="badge gold">Gold</span></h4>
+                                    <p class="pref">Prefiere: Tinto cuerpo medio, Iluminación cálida</p>
+                                    <p class="allergy">⚠️ Alergias: Ninguna</p>
+                                </div>
+                            </div>
+                            <div class="vip-card">
+                                <div class="vip-avatar">JK</div>
+                                <div class="vip-details">
+                                    <h4>James K. <span class="badge legacy">Legacy VIP</span></h4>
+                                    <p class="pref">Prefiere: Omakase completo, Silencio absoluto</p>
+                                    <p class="allergy">⚠️ Alergias: Frutos secos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Glassmorphism -->
+    <dialog id="modal-vip" class="glass-modal">
+        <div class="modal-inner">
+            <header class="modal-header">
+                <h3>Perfil Detallado: Miguel R.</h3>
+                <button class="close-btn" onclick="document.getElementById('modal-vip').close()">✕</button>
+            </header>
+            <div class="modal-body">
+                <p><strong>Última visita:</strong> 02 Abr 2026</p>
+                <p><strong>Gasto acumulado:</strong> $14,250</p>
+                <p><strong>Notas Concierge:</strong> <em>"Siempre solicita Yamazaki 18 años. Prefiere atención discreta. El chef debe saludarlo personalmente al llegar."</em></p>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn-primary">Enviar a Mesa</button>
+                <button class="btn-secondary" onclick="document.getElementById('modal-vip').close()">Cerrar</button>
+            </footer>
+        </div>
+    </dialog>
+</body>
+</html>
