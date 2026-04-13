@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservas | La Passion</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap"
+    />
+    <link rel="stylesheet" href="reservations.css" />
+    <script src="reservations.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <div class="progress">
+        <div class="step active" id="step1">Detalles</div>
+        <div class="line"></div>
+        <div class="step" id="step2">Confirmación</div>
+      </div>
+
+      <h1>Reservas</h1>
+      <form id="form1" class="form-card">
+        <h2>Detalle de la reserva</h2>
+        <div class="form-group">
+          <label for="guest-select">Número de personas</label>
+          <select id="guest-select">
+            <option value="one">1 persona</option>
+            <option value="two">2 personas</option>
+            <option value="three">3 personas</option>
+            <option value="four">4 personas</option>
+            <option value="fiveplus">5+ personas</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="reservation-date">Fecha</label
+          ><input id="reservation-date" type="date" />
+        </div>
+        <div class="form-group">
+          <label for="reservation-time">Hora</label
+          ><input id="reservation-time" type="time" />
+        </div>
+        <div class="form-group">
+          <label for="menu-type">Tipo de menú</label>
+          <select id="menu-type">
+            <option value="tasting">Degustación</option>
+            <option value="a la carte">A la carta</option>
+            <option value="pairing">Maridaje</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label for="special-request">Solicitudes especiales</label>
+          <textarea
+            id="special-request"
+            placeholder="Alergias, celebraciones, preferencias..."
+          ></textarea>
+        </div>
+        <div class="form-navigation">
+          <span></span>
+          <button type="button" class="a-button" onclick="nextForm()">
+            Continuar
+          </button>
+        </div>
+      </form>
+      <!--Form 2 -->
+      <form id="form2" class="form-card hidden">
+        <h2>Datos personales</h2>
+        <div>
+          <label for="client-name">Nombres</label>
+          <input type="text" id="client-name" />
+        </div>
+        <div>
+          <label for="client-last-names">Apellidos</label>
+          <input type="text" id="client-last-names" />
+        </div>
+        <div>
+          <label for="client-email">Correo electrónico</label>
+          <input type="email" id="client-email" />
+        </div>
+        <div>
+          <label for="client-phone">Número de teléfono</label>
+          <input type="tel" id="client-phone" />
+        </div>
+        <div class="form-navigation">
+          <span class="a-button" onclick="prevForm()">Volver</span>
+          <span class="a-button" onclick="openModal()()"
+            >Confirmar Reserva</span
+          >
+        </div>
+      </form>
+    </main>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <h2>Reserva confirmada</h2>
+        <p>Hemos recibido tu solicitud. Te esperamos en La Passion</p>
+        <div class="a-button" onclick="closeModal()">Cerrar</div>
+      </div>
+    </div>
+  </body>
+</html>
