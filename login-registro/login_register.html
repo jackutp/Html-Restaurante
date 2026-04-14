@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Access</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cinzel:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login_register.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <div class="logo">Le Bon Gout</div>
+
+        <!-- Botones Login / Registro -->
+        <div class="toggle-buttons">
+          <button class="toggle-btn active" onclick="showLogin()">
+            Iniciar Sesión
+          </button>
+          <button class="toggle-btn" onclick="showRegister()">
+            Registrarse
+          </button>
+        </div>
+
+        <!-- Formulario Login -->
+        <form id="loginForm" class="form active">
+          <h2>Bienvenido de vuelta</h2>
+          <input type="email" placeholder="Correo electrónico" required />
+          <input type="password" placeholder="Contraseña" required />
+          <button type="submit" class="btn-primary">Entrar</button>
+          <p class="message" id="loginMessage"></p>
+        </form>
+
+        <!-- Formulario Registro -->
+        <form id="registerForm" class="form">
+          <h2>Crea tu cuenta</h2>
+          <input
+            type="text"
+            id="regName"
+            placeholder="Nombre completo"
+            required
+          />
+          <input
+            type="email"
+            id="regEmail"
+            placeholder="Correo electrónico"
+            required
+          />
+          <input
+            type="password"
+            id="regPassword"
+            placeholder="Contraseña (mín. 6 caracteres)"
+            minlength="6"
+            required
+          />
+          <button type="submit" class="btn-primary">Crear cuenta</button>
+          <p class="message" id="registerMessage"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="login_register.js"></script>
+  </body>
+</html>
+
