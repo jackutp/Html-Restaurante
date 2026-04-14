@@ -105,13 +105,28 @@ section:nth-child(even) .text-container {
   text-align: center;
   min-height: 80vh;
   padding: 0 20px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-  background-image: url(images/comunicacionesmpgi-food-1036132_1920.jpg);
+  background: var(--bg);
+}
+.historia-content {
+  max-width: 1000px;
+}
+.historia-content p {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  color: var(--text);
+  font-weight: 400;
 }
 
+.historia-content p::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: var(--accent);
+  margin: 30px auto 0;
+}
 #historia::before {
   content: "";
   position: absolute;
@@ -120,9 +135,9 @@ section:nth-child(even) .text-container {
 }
 
 #historia .text-container {
-  max-width: 700px;
+  max-width: 1200px;
   z-index: 1;
-  padding: 0;
+  padding: 0 40px;
 }
 
 #historia h2 {

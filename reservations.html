@@ -19,12 +19,13 @@
         <div class="step" id="step2">Confirmación</div>
       </div>
 
+      <!--Form 1-->
       <h1>Reservas</h1>
       <form id="form1" class="form-card">
         <h2>Detalle de la reserva</h2>
         <div class="form-group">
           <label for="guest-select">Número de personas</label>
-          <select id="guest-select">
+          <select id="guest-select" required>
             <option value="one">1 persona</option>
             <option value="two">2 personas</option>
             <option value="three">3 personas</option>
@@ -34,15 +35,15 @@
         </div>
         <div class="form-group">
           <label for="reservation-date">Fecha</label
-          ><input id="reservation-date" type="date" />
+          ><input id="reservation-date" type="date" required />
         </div>
         <div class="form-group">
           <label for="reservation-time">Hora</label
-          ><input id="reservation-time" type="time" />
+          ><input id="reservation-time" type="time" required />
         </div>
         <div class="form-group">
           <label for="menu-type">Tipo de menú</label>
-          <select id="menu-type">
+          <select id="menu-type" required>
             <option value="tasting">Degustación</option>
             <option value="a la carte">A la carta</option>
             <option value="pairing">Maridaje</option>
@@ -67,25 +68,23 @@
         <h2>Datos personales</h2>
         <div>
           <label for="client-name">Nombres</label>
-          <input type="text" id="client-name" />
+          <input type="text" id="client-name" required />
         </div>
         <div>
           <label for="client-last-names">Apellidos</label>
-          <input type="text" id="client-last-names" />
+          <input type="text" id="client-last-names" required />
         </div>
         <div>
           <label for="client-email">Correo electrónico</label>
-          <input type="email" id="client-email" />
+          <input type="email" id="client-email" required />
         </div>
         <div>
           <label for="client-phone">Número de teléfono</label>
-          <input type="tel" id="client-phone" />
+          <input type="tel" id="client-phone" required />
         </div>
         <div class="form-navigation">
           <span class="a-button" onclick="prevForm()">Volver</span>
-          <span class="a-button" onclick="openModal()()"
-            >Confirmar Reserva</span
-          >
+          <button type="submit" class="a-button">Confirmar Reserva</button>
         </div>
       </form>
     </main>
